@@ -23,18 +23,20 @@
 
             <TextView
                 android:id="@+id/title"
+                style="@style/RecyclerViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/list_margin"
-                tools:text="alskdjflskjdf" />
+                tools:text="First Column"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/description"
+                style="@style/RecyclerViewText"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="lksjfglkjdsflgkjlsdkgj" />
+                tools:text="Second Column" />
 
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

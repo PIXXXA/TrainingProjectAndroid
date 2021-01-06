@@ -3,4 +3,5 @@
     <!--List Fragment-->
     <dimen name="card_radius">16dp</dimen>
     <dimen name="list_margin">16dp</dimen>
+    <dimen name="text_medium_size">18dp</dimen>
 </resources>

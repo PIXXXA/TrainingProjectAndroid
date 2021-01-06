@@ -1,9 +1,8 @@
 package com.itransition.trainingprojectandroid
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.ListFragment
 
 class HomeActivity : AppCompatActivity() {
@@ -15,9 +14,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setFragmentContainer() {
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer, ListFragment())
-        fragmentTransaction.commit()
+        val listFragment = ListFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentContainer, listFragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

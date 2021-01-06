@@ -12,10 +12,8 @@ class RecyclerListAdapter(
 ) : RecyclerView.Adapter<RecyclerListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerListViewHolder {
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false)
         return RecyclerListViewHolder(
-            view
+            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false)
         )
     }
 
@@ -24,6 +22,7 @@ class RecyclerListAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerListViewHolder, position: Int) {
+        notifyDataSetChanged()
         holder.bind(value[position])
     }
 }
