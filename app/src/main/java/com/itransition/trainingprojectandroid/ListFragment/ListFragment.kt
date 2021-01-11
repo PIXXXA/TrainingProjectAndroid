@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.ListRecyclerModel
 import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.RecyclerListAdapter
 import com.itransition.trainingprojectandroid.R
-import com.itransition.trainingprojectandroid.configAdapter
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment(), ListInterfaces.DataView {
@@ -32,6 +31,8 @@ class ListFragment : Fragment(), ListInterfaces.DataView {
     }
 
     override fun getDataFromPresenter(value: ArrayList<ListRecyclerModel>) {
-        this.configAdapter(value)
+        recycler_view.layoutManager = LinearLayoutManager(this.context)
+        val recyclerListAdapter = context?.let { RecyclerListAdapter(value, it) }
+        recycler_view.adapter = recyclerListAdapter
     }
 }

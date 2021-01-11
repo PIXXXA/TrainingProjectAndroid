@@ -24,26 +24,11 @@ fun Activity.setSplashScreen(delayTime: Long, activity: Activity) {
     }, delayTime)
 }
 
-fun ListPresenter.setRecyclerView(model: ListRecyclerModel, list: ArrayList<ListRecyclerModel>) {
-    for (i in 1..4) {
-        list.add(
-            ListRecyclerModel(i, "$")
-        )
-    }
-    model.addValue(list)
-}
-
-fun ListFragment.configAdapter(value: ArrayList<ListRecyclerModel>) {
-    recycler_view.layoutManager = LinearLayoutManager(this.context)
-    val recyclerListAdapter = context?.let { RecyclerListAdapter(value, it) }
-    recycler_view.adapter = recyclerListAdapter
-}
-
 fun ImageView.setImage(context: Context, id: Int) {
     this.setImageDrawable(ContextCompat.getDrawable(context, id));
 }
 
-fun TextView.setToolsText(visibility: Boolean) {
+fun TextView.setTextVisibility(visibility: Boolean) {
     if (visibility) {
         this.visibility = View.VISIBLE
     } else {
