@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -11,14 +11,13 @@
         android:layout_margin="@dimen/list_margin"
         android:background="@color/cardview_dark_background"
         app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="@dimen/card_radius"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -26,7 +25,6 @@
                 style="@style/RecyclerViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="First Column"
                 android:layout_weight="1"/>
 
             <TextView
@@ -34,8 +32,7 @@
                 style="@style/RecyclerViewText"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Second Column" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

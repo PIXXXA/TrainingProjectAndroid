@@ -1,9 +1,8 @@
 package com.itransition.trainingprojectandroid
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,12 +12,9 @@ class MainActivity : AppCompatActivity() {
         configSplashScreen()
     }
 
-    private fun configSplashScreen(){
-        Handler().postDelayed({
-            val intent = Intent(this@MainActivity, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, DELAY_TIME)
+    private fun configSplashScreen() {
+        imageView.setImage(this, R.drawable.ic_splash_screen)
+        this.setSplashScreen(DELAY_TIME, HomeActivity())
     }
 
     companion object {

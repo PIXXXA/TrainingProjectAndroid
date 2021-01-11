@@ -13,8 +13,7 @@ class RecyclerListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerListViewHolder {
         return RecyclerListViewHolder(
-            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false)
-        )
+            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -22,6 +21,7 @@ class RecyclerListAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerListViewHolder, position: Int) {
+        holder.setToolsText()
         holder.bind(value[position])
     }
 }

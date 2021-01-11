@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.ListRecyclerModel
 import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.RecyclerListAdapter
 import com.itransition.trainingprojectandroid.R
+import com.itransition.trainingprojectandroid.configAdapter
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment(), ListInterfaces.DataView {
 
-    private var presenter: ListInterfaces.Presenter = ListPresenter(this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -27,12 +27,11 @@ class ListFragment : Fragment(), ListInterfaces.DataView {
     }
 
     private fun initView() {
-        recycler_view.layoutManager = LinearLayoutManager(this.context)
+        val presenter: ListInterfaces.Presenter = ListPresenter(this)
         presenter.getData()
     }
 
     override fun getDataFromPresenter(value: ArrayList<ListRecyclerModel>) {
-        val recyclerListAdapter = context?.let { RecyclerListAdapter(value, it) }
-        recycler_view.adapter = recyclerListAdapter
+        this.configAdapter(value)
     }
 }
