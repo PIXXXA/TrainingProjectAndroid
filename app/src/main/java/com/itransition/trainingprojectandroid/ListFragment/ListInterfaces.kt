@@ -13,7 +13,7 @@ interface ListInterfaces {
     }
 
     interface ModelInterfaces {
-        fun addValue(value: ListRecyclerModel)
-        fun getData(): ArrayList<ListRecyclerModel>
+        fun addValue(value: ArrayList<ListRecyclerModel>)
+        fun getData(value: ArrayList<ListRecyclerModel>): ArrayList<ListRecyclerModel>
     }
 }

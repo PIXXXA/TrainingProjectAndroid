@@ -13,27 +13,26 @@ import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment(), ListInterfaces.DataView {
 
-    private lateinit var presenter: ListInterfaces.Presenter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        presenter = ListPresenter(this)
-    }
+    private var presenter: ListInterfaces.Presenter = ListPresenter(this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        initView()
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initView()
+    }
+
     private fun initView() {
+        recycler_view.layoutManager = LinearLayoutManager(this.context)
         presenter.getData()
     }
 
     override fun getDataFromPresenter(value: ArrayList<ListRecyclerModel>) {
-        val recyclerListAdapter = RecyclerListAdapter(value, view!!.context)
-        recycler_view.layoutManager = LinearLayoutManager(context)
+        val recyclerListAdapter = context?.let { RecyclerListAdapter(value, it) }
         recycler_view.adapter = recyclerListAdapter
     }
 }

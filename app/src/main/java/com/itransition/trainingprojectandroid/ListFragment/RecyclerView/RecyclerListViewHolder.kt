@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.list_recycler_view.view.*
 
 class RecyclerListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
     fun bind(model: ListRecyclerModel){
-        itemView.title.text = model.title
-        itemView.description.text = model.description
+            itemView.title.text = model.title.toString()
+            itemView.description.text = model.description
     }
 }

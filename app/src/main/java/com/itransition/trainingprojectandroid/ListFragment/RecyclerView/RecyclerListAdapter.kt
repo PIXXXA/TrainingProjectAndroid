@@ -22,7 +22,6 @@ class RecyclerListAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerListViewHolder, position: Int) {
-        notifyDataSetChanged()
         holder.bind(value[position])
     }
 }

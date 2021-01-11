@@ -4,23 +4,19 @@ import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.ListRecy
 
 class ListPresenter(var view: ListInterfaces.DataView) : ListInterfaces.Presenter {
 
-    private lateinit var model: ListRecyclerModel
+    private var list: ArrayList<ListRecyclerModel> = arrayListOf()
 
     init {
-        setModelData()
-    }
-
-    private fun setModelData() {
-        for(i in 1..4)
-        model.addValue(
-            ListRecyclerModel(
-                i.toString(),
-                "$"
+        val model: ListRecyclerModel? = ListRecyclerModel(3,"sadfsdf")
+        for (i in 1..4) {
+            list.add(
+                ListRecyclerModel(i, "$")
             )
-        )
+        }
+        model?.addValue(list)
     }
 
     override fun getData() {
-        view.getDataFromPresenter(model.getData())
+        view.getDataFromPresenter(list)
     }
 }
