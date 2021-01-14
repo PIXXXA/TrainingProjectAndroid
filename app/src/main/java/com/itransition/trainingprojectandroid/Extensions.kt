@@ -8,13 +8,6 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.itransition.trainingprojectandroid.ListFragment.ListFragment
-import com.itransition.trainingprojectandroid.ListFragment.ListPresenter
-import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.ListRecyclerModel
-import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.RecyclerListAdapter
-import kotlinx.android.synthetic.main.fragment_list.*
 
 fun Activity.setSplashScreen(delayTime: Long, activity: Activity) {
     Handler().postDelayed({

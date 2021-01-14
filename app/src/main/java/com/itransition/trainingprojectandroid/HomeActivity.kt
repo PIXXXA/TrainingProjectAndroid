@@ -1,9 +1,9 @@
 package com.itransition.trainingprojectandroid
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.itransition.trainingprojectandroid.ListFragment.ListFragment
+import androidx.fragment.app.Fragment
+import com.itransition.trainingprojectandroid.listfragment.ListFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
     private fun setFragmentContainer() {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.fragmentContainer, ListFragment())
+            .replace(R.id.fragmentContainer, ListFragment() as Fragment)
             .addToBackStack(null)
             .commit()
     }

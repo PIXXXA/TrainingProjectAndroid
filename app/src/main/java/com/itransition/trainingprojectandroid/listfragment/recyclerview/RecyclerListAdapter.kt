@@ -1,4 +1,4 @@
-package com.itransition.trainingprojectandroid.ListFragment.RecyclerView
+package com.itransition.trainingprojectandroid.listfragment.recyclerview
 
 import android.content.Context
 import android.view.LayoutInflater

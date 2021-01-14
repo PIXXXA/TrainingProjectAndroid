@@ -1,6 +1,6 @@
-package com.itransition.trainingprojectandroid.ListFragment
+package com.itransition.trainingprojectandroid.listfragment
 
-import com.itransition.trainingprojectandroid.ListFragment.RecyclerView.ListRecyclerModel
+import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
 
 class ListPresenter(var view: ListInterfaces.DataView) : ListInterfaces.Presenter {
 
