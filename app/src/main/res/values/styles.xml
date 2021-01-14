@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--List Fragment-->
+    <style name="RecyclerViewText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_medium_size</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>
