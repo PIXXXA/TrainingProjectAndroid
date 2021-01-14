@@ -1,19 +1,14 @@
 package com.itransition.trainingprojectandroid.listfragment
 
 import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
+import moxy.MvpView
+import moxy.viewstate.strategy.alias.AddToEnd
 
-interface ListInterfaces {
+interface ListInterfaces : MvpView {
 
-    interface DataView {
-        fun getDataFromPresenter(value: ArrayList<ListRecyclerModel>)
-    }
+    @AddToEnd
+    fun getData(value: ArrayList<ListRecyclerModel>)
 
-    interface Presenter {
-        fun getData()
-    }
-
-    interface ModelInterfaces {
-        fun addValue(value: ArrayList<ListRecyclerModel>)
-        fun getData(value: ArrayList<ListRecyclerModel>): ArrayList<ListRecyclerModel>
-    }
+    @AddToEnd
+    fun addValue(value: ArrayList<ListRecyclerModel>)
 }

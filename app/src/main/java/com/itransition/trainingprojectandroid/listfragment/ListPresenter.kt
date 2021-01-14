@@ -1,27 +1,25 @@
 package com.itransition.trainingprojectandroid.listfragment
 
 import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
+import moxy.InjectViewState
+import moxy.MvpPresenter
 
-class ListPresenter(var view: ListInterfaces.DataView) : ListInterfaces.Presenter {
+@InjectViewState
+class ListPresenter : MvpPresenter<ListInterfaces>() {
 
     private var list: ArrayList<ListRecyclerModel> = arrayListOf()
 
     init {
-        val model: ListRecyclerModel? = ListRecyclerModel(DEF_TITLE, DEF_DESCRIPTION)
         for (i in 1..4) {
             list.add(
                 ListRecyclerModel(i, "$")
             )
         }
-        model?.addValue(list)
     }
 
-    override fun getData() {
-        view.getDataFromPresenter(list)
-    }
-
-    companion object {
-        const val DEF_TITLE = 0
-        const val DEF_DESCRIPTION = ""
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        viewState.addValue(list)
+        viewState.getData(list)
     }
 }

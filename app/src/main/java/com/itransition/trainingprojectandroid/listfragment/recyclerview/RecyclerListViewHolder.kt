@@ -2,6 +2,7 @@ package com.itransition.trainingprojectandroid.listfragment.recyclerview
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
 import com.itransition.trainingprojectandroid.setTextVisibility
 import kotlinx.android.synthetic.main.list_recycler_view.view.*
 

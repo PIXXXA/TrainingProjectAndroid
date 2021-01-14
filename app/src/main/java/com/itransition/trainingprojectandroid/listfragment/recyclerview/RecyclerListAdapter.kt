@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.itransition.trainingprojectandroid.R
+import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
+import com.itransition.trainingprojectandroid.listfragment.recyclerview.RecyclerListViewHolder
 
 class RecyclerListAdapter(
     var value: ArrayList<ListRecyclerModel>,
