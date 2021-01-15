@@ -1,6 +1,6 @@
-package com.itransition.trainingprojectandroid.listfragment.recyclerview
+package com.itransition.trainingprojectandroid.mvp.recyclerview
 
-import com.itransition.trainingprojectandroid.listfragment.ListInterfaces
+import com.itransition.trainingprojectandroid.mvp.ListInterfaces
 
 class ListRecyclerModel(var title: Int, var description: String) :
     ListInterfaces.ModelInterfaces {

@@ -1,4 +1,4 @@
-package com.itransition.trainingprojectandroid.listfragment.recyclerview
+package com.itransition.trainingprojectandroid.mvp.recyclerview
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

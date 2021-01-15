@@ -3,7 +3,7 @@ package com.itransition.trainingprojectandroid
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.itransition.trainingprojectandroid.listfragment.ListFragment
+import com.itransition.trainingprojectandroid.mvp.ListFragment
 
 class HomeActivity : AppCompatActivity() {
 
