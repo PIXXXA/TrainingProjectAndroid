@@ -1,5 +1,6 @@
-package com.itransition.trainingprojectandroid.listfragment
+package com.itransition.trainingprojectandroid.mvp
 
+import com.itransition.trainingprojectandroid.mvp.recyclerview.ListRecyclerModel
 import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
 import moxy.InjectViewState
 import moxy.MvpPresenter

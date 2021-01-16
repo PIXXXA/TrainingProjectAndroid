@@ -1,12 +1,12 @@
-package com.itransition.trainingprojectandroid.listfragment
+package com.itransition.trainingprojectandroid.mvp
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.itransition.trainingprojectandroid.listfragment.recyclerview.ListRecyclerModel
-import com.itransition.trainingprojectandroid.listfragment.recyclerview.RecyclerListAdapter
+import com.itransition.trainingprojectandroid.mvp.recyclerview.ListRecyclerModel
+import com.itransition.trainingprojectandroid.mvp.recyclerview.RecyclerListAdapter
 import com.itransition.trainingprojectandroid.R
 import kotlinx.android.synthetic.main.fragment_list.*
 import moxy.MvpFragment
