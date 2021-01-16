@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.itransition.trainingprojectandroid.mvp.ListFragment
+import com.itransition.trainingprojectandroid.mvvm.MvvmFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -16,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
     private fun setFragmentContainer() {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.fragmentContainer, ListFragment() as Fragment)
+            .replace(R.id.fragmentContainer, MvvmFragment() as Fragment)
             .addToBackStack(null)
             .commit()
     }
