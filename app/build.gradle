@@ -7,6 +7,11 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     defaultConfig {
         applicationId "com.itransition.trainingprojectandroid"
         minSdkVersion 23
@@ -41,8 +46,7 @@ dependencies {
 
     implementation "com.github.moxy-community:moxy:2.2.1"
     kapt "com.github.moxy-community:moxy-compiler:2.2.1"
-    implementation "com.github.moxy-community:moxy-android:2.2.1"
-    implementation "com.github.moxy-community:moxy-app-compat:2.2.1"
+    implementation "com.github.moxy-community:moxy-androidx:2.2.1"
     implementation "com.github.moxy-community:moxy-material:2.2.1"
     implementation "com.github.moxy-community:moxy-ktx:2.2.1"
 }
