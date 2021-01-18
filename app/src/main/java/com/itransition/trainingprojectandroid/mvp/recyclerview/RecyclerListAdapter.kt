@@ -7,13 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.itransition.trainingprojectandroid.R
 
 class RecyclerListAdapter(
-    var value: ArrayList<ListRecyclerModel>,
+    var value: ArrayList<RecyclerModel>,
     var context: Context
 ) : RecyclerView.Adapter<RecyclerListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerListViewHolder {
         return RecyclerListViewHolder(
-            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false))
+            LayoutInflater.from(context).inflate(R.layout.list_recycler_view, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {
